@@ -2,13 +2,13 @@ import { Component, OnChanges, Input, Output, EventEmitter, SimpleChanges, ViewE
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
-  selector: 'ssrs-reportviewer',
-  template: `
+    selector: 'ssrs-reportviewer',
+    template: `
   <div class="iframe-container">
     <iframe [src]="source" scrolling="no"></iframe>
   </div>
   `,
-  styles: [`
+    styles: [`
   .iframe-container {
     overflow: hidden;
     padding-top: 56.25%;
@@ -29,7 +29,8 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
     padding-top: 75%;
   }
   `],
-  encapsulation: ViewEncapsulation.ShadowDom
+    encapsulation: ViewEncapsulation.ShadowDom,
+    standalone: false
 })
 export class ReportViewerComponent implements OnChanges {
 
