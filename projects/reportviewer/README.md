@@ -78,7 +78,8 @@ export class AppModule { }
         <ssrs-reportviewer
             [reportserver]="reportServer"
             [reporturl]="reportUrl"
-            [showparameters]="showParameters" 
+            [showparameters]="showParameters"
+            [showbackbutton]="showBackButton"
             [parameters]="parameters" 
             [language]="language" 
             [width] ="width" 
@@ -104,6 +105,7 @@ export class AppComponent {
   reportServer: string = 'http://myreportserver/reportserver';
   reportUrl: string = 'MyReports/SampleReport';
   showParameters: string = "true"; 
+  showBackButton: string = "false"
   parameters: any = {
    "SampleStringParameter": null,
    "SampleBooleanParameter" : false,

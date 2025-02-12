@@ -40,6 +40,8 @@ export class ReportViewerComponent implements OnChanges {
   @Input()
   showparameters?: string = "false";
   @Input()
+  showbackbutton?: string = "false";
+  @Input()
   parameters?: any;
   @Input()
   language?: string = "en-us";
@@ -99,6 +101,7 @@ export class ReportViewerComponent implements OnChanges {
     return this.reportserver + '?/'
       + this.reporturl + '&rs:Embed=true'
       + '&rc:Parameters=' + this.showparameters
+      + '&rc:showbackbutton=' + this.showbackbutton
       + parameters
       + '&rs:ParameterLanguage=' + this.language + "&rc:Toolbar=" + this.toolbar; 
   }
