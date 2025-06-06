@@ -10,7 +10,6 @@
 <a href="https://github.com/danisss9/ngx-ssrs-reportviewer-v2/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
 </p>
 
-
 <p align="center">
   <a href="#-installation">Installation</a> ·
   <a href="#-usage">Usage</a> ·
@@ -45,6 +44,7 @@ npm install ngx-ssrs-reportviewer-v2 --save
 | 17              | 17                   | npm install ngx-ssrs-reportviewer-v2@17 |
 | 18              | 18                   | npm install ngx-ssrs-reportviewer-v2@18 |
 | 19              | 19                   | npm install ngx-ssrs-reportviewer-v2@19 |
+| 20              | 20                   | npm install ngx-ssrs-reportviewer-v2@20 |
 
 ## 👨🏻‍🏫 Usage
 
@@ -72,7 +72,7 @@ export class AppModule { }
 
 ```
 
-2. Add the report viewer to your components html template. An example `app.component.html` with all the report viewer attributes could look as follows: 
+2. Add the report viewer to your components html template. An example `app.component.html` with all the report viewer attributes could look as follows:
 
 ```html
     <div class="container">
@@ -88,6 +88,7 @@ export class AppModule { }
         </ssrs-reportviewer>
     </div>
 ```
+
 NOTE: Many of these attributes are optional. I will cover which attributes are required below and what each one does.
 
 4. Now inside your component the report viewer attributes specified in the ssrs-reportviewer component can be initialized. Initialization of all the attributes inside `app.component.ts` would look like this:
@@ -124,7 +125,7 @@ export class AppComponent {
 
 | Name          | Description   | Options | Required |
 | ------------- |-------------| -----:|-----:|
-| reportserver  | The *rswebserviceurl* of your report server.  The default of most configurations looks like http://myreportserver/reportserver | N/A | Yes |
+| reportserver  | The *rswebserviceurl* of your report server.  The default of most configurations looks like <http://myreportserver/reportserver> | N/A | Yes |
 | reporturl      | The *pathinfo* of your report.  This is the relative name of the report in your report server.       |   N/A | Yes |
 | showparameters | Controls the display of parameters.      |  true, false, collapsed   | No |
 | toolbar | Controls the display of the report viewer toolbar.  |  true, false   | No |
@@ -134,6 +135,7 @@ export class AppComponent {
 | height | The height of the viewer relative to its container.  Default is 100.  | 1-100  | No |
 
 ## 🔢 Examples
+
 Here are some simple examples of the report viewer.
 
 showparameters set to "true"
@@ -143,14 +145,15 @@ showparameters set to "false"
 <img src="images/toolbar_false.PNG">
 
 ## ❗ Limitations
-There are some limitations with the report viewer component that should be noted. 
+
+There are some limitations with the report viewer component that should be noted.
 
 1. Authentication.
  Depending on the authentication you use in your application you may run into problems with permissions.  SQL Server Reporting Services uses Windows Authentication to determine access to the reports.  If you are working in a .NET/.NET Core environment you can enable Windows Authentication in your app and the users credentials will be passed to the report server.  You could also configure your application to use Impersonation to pass the necessary credentials to your report.  How you handle these limitations will depend on your own environment.  Currently you cannot securely pass credentials to the report server with URL access.
 
- 2. Preventing Mixed Content
+2. Preventing Mixed Content
   The report viewer uses iframes so if your reportserver is HTTP and you are trying to render it in an HTTPS application you will run into issues.
 
-
 ## 🐞 Bugs
+
 If you find this package helpful throw a star my way and please report any bugs you encounter.
