@@ -1,12 +1,8 @@
 import { NgModule } from '@angular/core';
 import { ReportViewerComponent } from './reportviewer.component';
 
-
-
 @NgModule({
-  declarations: [ReportViewerComponent],
-  imports: [
-  ],
-  exports: [ReportViewerComponent]
+  imports: [ReportViewerComponent],
+  exports: [ReportViewerComponent],
 })
-export class ReportViewerModule { }
+export class ReportViewerModule {}

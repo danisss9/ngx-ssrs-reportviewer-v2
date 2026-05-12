@@ -8,9 +8,8 @@ describe('ReportViewerComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReportViewerComponent ]
-    })
-    .compileComponents();
+      imports: [ReportViewerComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
