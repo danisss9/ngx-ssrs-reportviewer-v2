@@ -46,6 +46,7 @@ npm install ngx-ssrs-reportviewer-v2 --save
 | 19              | 19                   | npm install ngx-ssrs-reportviewer-v2@19 |
 | 20              | 20                   | npm install ngx-ssrs-reportviewer-v2@20 |
 | 21              | 21                   | npm install ngx-ssrs-reportviewer-v2@21 |
+| 22              | 22                   | npm install ngx-ssrs-reportviewer-v2@22 |
 
 ## 👨🏻‍🏫 Usage
 
@@ -73,7 +74,7 @@ export class AppModule { }
 
 ```
 
-2. Add the report viewer to your components html template. An example `app.component.html` with all the report viewer attributes could look as follows:
+1. Add the report viewer to your components html template. An example `app.component.html` with all the report viewer attributes could look as follows:
 
 ```html
     <div class="container">
@@ -92,7 +93,7 @@ export class AppModule { }
 
 NOTE: Many of these attributes are optional. I will cover which attributes are required below and what each one does.
 
-4. Now inside your component the report viewer attributes specified in the ssrs-reportviewer component can be initialized. Initialization of all the attributes inside `app.component.ts` would look like this:
+1. Now inside your component the report viewer attributes specified in the ssrs-reportviewer component can be initialized. Initialization of all the attributes inside `app.component.ts` would look like this:
 
 ```typescript
 import { Component } from '@angular/core';

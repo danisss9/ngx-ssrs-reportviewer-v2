@@ -6,6 +6,7 @@ import {
   EventEmitter,
   SimpleChanges,
   ViewEncapsulation,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
@@ -40,13 +41,14 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
     `,
   ],
   encapsulation: ViewEncapsulation.ShadowDom,
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: true,
 })
 export class ReportViewerComponent implements OnChanges {
   @Input()
-  reporturl: string;
+  reporturl!: string;
   @Input()
-  reportserver: string;
+  reportserver!: string;
   @Input()
   showparameters?: string = 'false';
   @Input()
@@ -63,7 +65,7 @@ export class ReportViewerComponent implements OnChanges {
   @Output('error') onError = new EventEmitter<any>();
   constructor(private sanitizer: DomSanitizer) {}
 
-  source: SafeResourceUrl;
+  source!: SafeResourceUrl;
 
   ngOnChanges(changes: SimpleChanges) {
     if (!this.reporturl) {
@@ -106,7 +108,7 @@ export class ReportViewerComponent implements OnChanges {
 
   public buildReportUrl(): string {
     if (!this.reporturl) {
-      return;
+      return '';
     }
     var parameters = this.buildParameterString();
     return (

@@ -1,26 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    standalone: false
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
+  standalone: false,
 })
 export class AppComponent {
-  reportServer: string = 'http://ssrs-testserver.westus2.cloudapp.azure.com/reportserver';
+  reportServer: string =
+    'http://ssrs-testserver.westus2.cloudapp.azure.com/reportserver';
   reportUrl: string = 'SampleWithParameters';
-  showParameters: string = "false"; //true, false, collapsed
+  showParameters: string = 'false'; //true, false, collapsed
   parameters: any = {
-    "SampleStringParameter": "String",
-    "SampleBooleanParameter": false,
-    "SampleDateTimeParameter": "2/9/2019",
-    "SampleIntParameter": 12345,
-    "SampleFloatParameter": "123.1234",
-    "SampleMultipleStringParameter": ["Parameter1", "Parameter2"]
+    SampleStringParameter: 'String',
+    SampleBooleanParameter: false,
+    SampleDateTimeParameter: '2/9/2019',
+    SampleIntParameter: 12345,
+    SampleFloatParameter: '123.1234',
+    SampleMultipleStringParameter: ['Parameter1', 'Parameter2'],
   };
-  language: string = "en-us";
+  language: string = 'en-us';
   width: number = 50;
   height: number = 50;
-  toolbar: string = "false";
+  toolbar: string = 'false';
 }
-

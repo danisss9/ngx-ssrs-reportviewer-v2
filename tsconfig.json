@@ -1,7 +1,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "esModuleInterop": true,
@@ -13,8 +12,8 @@
     "module": "es2020",
     "paths": {
       "reportviewer": [
-        "dist/reportviewer/reportviewer",
-        "dist/reportviewer"
+        "./dist/reportviewer/reportviewer",
+        "./dist/reportviewer"
       ]
     },
     "useDefineForClassFields": false
